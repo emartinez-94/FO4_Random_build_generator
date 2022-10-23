@@ -18,41 +18,42 @@ public class Driver {
      * @param args the command line arguments
      */
     static void bobblehead(PlayerFO4 player){
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Which SPECIAL Bobblehead did you get?\n1. Strength\n2. Perception\n3. Endurance\n4. Charisma\n5. Intelligence\n6. Agility\n7. Luck");
-        int bobblehead = keyboard.nextInt();
-        switch(bobblehead){
-            case 1 -> {
-                player.getSPECIAL()[bobblehead-1] += 1;
-                charDisplay(player);
-            }
-            case 2 -> {
-                player.getSPECIAL()[bobblehead-1] += 1;
-                charDisplay(player);
-            }
-            case 3 -> {
-                player.getSPECIAL()[bobblehead-1] += 1;
-                charDisplay(player);
-            }
-            case 4 -> {
-                player.getSPECIAL()[bobblehead-1] += 1;
-                charDisplay(player);
-            }
-            case 5 -> {
-                player.getSPECIAL()[bobblehead-1] += 1;
-                charDisplay(player);
-            }
-            case 6 -> {
-                player.getSPECIAL()[bobblehead-1] += 1;
-                charDisplay(player);
-            }
-            case 7 -> {
-                player.getSPECIAL()[bobblehead-1] += 1;
-                charDisplay(player);
-            }
-            default ->{
-                System.out.println("Invalid input try againg.");
-                bobblehead(player);
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Which SPECIAL Bobblehead did you get?\n1. Strength\n2. Perception\n3. Endurance\n4. Charisma\n5. Intelligence\n6. Agility\n7. Luck");
+            int bobblehead = keyboard.nextInt();
+            switch(bobblehead){
+                case 1 -> {
+                    player.getSPECIAL()[bobblehead-1] += 1;
+                    charDisplay(player);
+                }
+                case 2 -> {
+                    player.getSPECIAL()[bobblehead-1] += 1;
+                    charDisplay(player);
+                }
+                case 3 -> {
+                    player.getSPECIAL()[bobblehead-1] += 1;
+                    charDisplay(player);
+                }
+                case 4 -> {
+                    player.getSPECIAL()[bobblehead-1] += 1;
+                    charDisplay(player);
+                }
+                case 5 -> {
+                    player.getSPECIAL()[bobblehead-1] += 1;
+                    charDisplay(player);
+                }
+                case 6 -> {
+                    player.getSPECIAL()[bobblehead-1] += 1;
+                    charDisplay(player);
+                }
+                case 7 -> {
+                    player.getSPECIAL()[bobblehead-1] += 1;
+                    charDisplay(player);
+                }
+                default ->{
+                    System.out.println("Invalid input try againg.");
+                    bobblehead(player);
+                }
             }
         }
         
@@ -88,11 +89,12 @@ public class Driver {
     }
     static void strPerks(int perk,PlayerFO4 player){
         String maxLevel;
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Is " + player.getStrengthPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Is " + player.getStrengthPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
   
-            maxLevel = keyboard.nextLine();
-            try{
+                maxLevel = keyboard.nextLine();
+        }
+        try{
                 int choise = Integer.parseInt(maxLevel);
                 switch(choise){
                     case 1 -> {
@@ -118,11 +120,12 @@ public class Driver {
     }
     static void perPerks(int perk,PlayerFO4 player){
         String maxLevel;
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Is " + player.getPerceptionPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Is " + player.getPerceptionPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
 
-            maxLevel = keyboard.nextLine();
-            try{
+                maxLevel = keyboard.nextLine();
+        }
+        try{
                 int choise = Integer.parseInt(maxLevel);
                 switch(choise){
                     case 1 -> {
@@ -149,11 +152,12 @@ public class Driver {
     }
     static void endPerks(int perk,PlayerFO4 player){
         String maxLevel;
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Is " + player.getEndurancePerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Is " + player.getEndurancePerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
  
-            maxLevel = keyboard.nextLine();
-            try{
+                maxLevel = keyboard.nextLine();
+        }
+        try{
                 int choise = Integer.parseInt(maxLevel);
                 switch(choise){
                     case 1 -> {
@@ -180,11 +184,12 @@ public class Driver {
     }
     static void charPerks(int perk,PlayerFO4 player){
         String maxLevel;
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Is " + player.getCharismaPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Is " + player.getCharismaPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
 
-            maxLevel = keyboard.nextLine();
-            try{
+                maxLevel = keyboard.nextLine();
+        }
+        try{
                 int choise = Integer.parseInt(maxLevel);
                 switch(choise){
                     case 1 -> {
@@ -211,11 +216,12 @@ public class Driver {
     }
     static void intPerks(int perk,PlayerFO4 player){
         String maxLevel;
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Is " + player.getIntelligencePerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Is " + player.getIntelligencePerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
  
-            maxLevel = keyboard.nextLine();
-            try{
+                maxLevel = keyboard.nextLine();
+        }
+        try{
                 int choise = Integer.parseInt(maxLevel);
                 switch(choise){
                     case 1 -> {
@@ -243,11 +249,12 @@ public class Driver {
     }
     static void agPerks(int perk,PlayerFO4 player){
         String maxLevel;
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Is " + player.getAgilityPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
-     
-            maxLevel = keyboard.nextLine();
-            try{
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Is " + player.getAgilityPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
+    
+                maxLevel = keyboard.nextLine();
+        }
+        try{
                 int choise = Integer.parseInt(maxLevel);
                 switch(choise){
                     case 1 -> {
@@ -275,11 +282,12 @@ public class Driver {
     }
     static void luckPerks(int perk,PlayerFO4 player){
         String maxLevel;
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Is " + player.getLuckPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Is " + player.getLuckPerk()[perk] + " availabe to add a perk?" + "?\n1.Yes\n2.No");
   
-            maxLevel = keyboard.nextLine();
-            try{
+                maxLevel = keyboard.nextLine();
+        }
+        try{
                 int choise = Integer.parseInt(maxLevel);
                 switch(choise){
                     case 1 -> {
@@ -312,10 +320,11 @@ public class Driver {
             player.setLvl(1);
             charDisplay(player);
         }else if (choice == 2){
-            Scanner keyboard = new Scanner(System.in);
-            System.out.println("What is the name of the file?");
-            String name = keyboard.nextLine()+".txt";
-            load(name);
+            try (Scanner keyboard = new Scanner(System.in)) {
+                System.out.println("What is the name of the file?");
+                String name = keyboard.nextLine()+".txt";
+                load(name);
+            }
             
         }else if (choice == 3){
             System.exit(0);
@@ -340,11 +349,12 @@ public class Driver {
                 }
             }
             case 3 -> {
-                Scanner keyboard = new Scanner(System.in);
-                System.out.println("Under what name would you like to save the file?");
-                String name = keyboard.nextLine() + ".txt";
-                save(player, name);
-            }
+                try (Scanner keyboard = new Scanner(System.in)) {
+                    System.out.println("Under what name would you like to save the file?");
+                    String name = keyboard.nextLine() + ".txt";
+                    save(player, name);
+                }
+                 }
             case 4 -> bobblehead(player);
             case 5 -> startMenu();
             case 6 -> System.exit(0);
@@ -353,38 +363,40 @@ public class Driver {
             charDisplay(player);
     }
     static void charDisplay(PlayerFO4 player){
-        Scanner keyboard = new Scanner(System.in);
-        String choice;
-        System.out.println("\n\nName: " + player.getName() + "\tLevel: " + player.getLevel() );
-        System.out.println("Sex: " + player.getSex());
-        for (int i = 0; i < player.getAttributes().length; i++){
-            System.out.println(player.getAttributes()[i] + " " + player.getSPECIAL()[i]);
-        }
-        System.out.println("You're SPECIAL book: " + player.getGotbook());
-        System.out.println("\nCharacter Menu:\n1. Level UP\n2. Got You're SpecialBook\n3. Save Current Build\n4. Special Bobblehead\n5. Return to Main Menu\n6. Exit");
-        
-        choice = keyboard.nextLine();
-        try{
-            int test = Integer.parseInt(choice);
-            checkUserInput(player,test);
-                
-            }catch(NumberFormatException e){
-                System.out.println("ERROR!! " + e);
-                System.exit(0);
+        try (Scanner keyboard = new Scanner(System.in)) {
+            String choice;
+            System.out.println("\n\nName: " + player.getName() + "\tLevel: " + player.getLevel() );
+            System.out.println("Sex: " + player.getSex());
+            for (int i = 0; i < player.getAttributes().length; i++){
+                System.out.println(player.getAttributes()[i] + " " + player.getSPECIAL()[i]);
             }
+            System.out.println("You're SPECIAL book: " + player.getGotbook());
+            System.out.println("\nCharacter Menu:\n1. Level UP\n2. Got You're SpecialBook\n3. Save Current Build\n4. Special Bobblehead\n5. Return to Main Menu\n6. Exit");
+            
+            choice = keyboard.nextLine();
+            try{
+                int test = Integer.parseInt(choice);
+                checkUserInput(player,test);
+                    
+                }catch(NumberFormatException e){
+                    System.out.println("ERROR!! " + e);
+                    System.exit(0);
+                }
+        }
     }
     static void startMenu(){
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Welcome to the Fallout 4 GOTY random build generator");
-        System.out.println("Menu\n\n1. Generate New Random Build\n2. Load Build\n3. Exit");
-        String choice = keyboard.nextLine();
-        try{
-            int inp = Integer.parseInt(choice);
-            Input(inp);
-                
-        }catch(NumberFormatException e){
-            System.out.println("ERROR!! " + e);
-            startMenu();
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Welcome to the Fallout 4 GOTY random build generator");
+            System.out.println("Menu\n\n1. Generate New Random Build\n2. Load Build\n3. Exit");
+            String choice = keyboard.nextLine();
+            try{
+                int inp = Integer.parseInt(choice);
+                Input(inp);
+                    
+            }catch(NumberFormatException e){
+                System.out.println("ERROR!! " + e);
+                startMenu();
+            }
         }
         
         
@@ -411,11 +423,12 @@ public class Driver {
         File inFile = new File(fileName);
         try {
             
-            Scanner fromFile = new Scanner(inFile);
-            
-            while (fromFile.hasNextLine()){
-                lineFile = fromFile.nextLine();
+            try (Scanner fromFile = new Scanner(inFile)) {
+                while (fromFile.hasNextLine()){
+                    lineFile = fromFile.nextLine();
+                }
             }
+            
             String[] object = lineFile.split("\\,");
             player.setName(object[0]);
             player.setSex(object[1]);
